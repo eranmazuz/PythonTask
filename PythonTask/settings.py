@@ -118,3 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Authentication backend to authenticate a user
+AUTHENTICATION_BACKENDS = ['PythonTask.auth.backends.TradeCoreBackend']
