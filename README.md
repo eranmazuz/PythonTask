@@ -9,6 +9,10 @@ Sorry for the lack of automated testing, Because lack of time I only tested the 
 ##Installation
 It's recommended to use python virtual environment to run the project.
 
+There need to provide the following fields in the django site settings (The fields already exist in the site settings file):
+* HUNTER_API_KEY - The API key of the hunter.io.
+* CLEARBIT_API_KEY - The Clearbit Enrichment API key. 
+
 To install the project required packages: 
 
 `pip install -r requirements.txt`

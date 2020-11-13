@@ -116,10 +116,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # hunter.io API key
-HUNTER_API_KEY = 'a9ba93e8b783e589e53e6d5e3cf983c3ecb1c758'
+HUNTER_API_KEY = 'Hunter.io API Key'
 
 # clearbit enrichment API key
-CLEARBIT_API_KEY = 'sk_e05c3ad094e919397c321893dba3fa23'
+CLEARBIT_API_KEY = 'Clearbit Enrichment API key'
 
 # The users models that to use for signing up and login the users.
 AUTH_USER_MODEL = 'SocialNetwork.User'
