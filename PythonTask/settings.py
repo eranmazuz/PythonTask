@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',  # To use Django REST framework.
+    'SocialNetwork',  # The app.
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PythonTask.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -79,7 +78,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -99,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -113,11 +110,21 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
 
-# Authentication backend to authenticate a user
-AUTHENTICATION_BACKENDS = ['PythonTask.auth.backends.TradeCoreBackend']
+# hunter.io API key
+HUNTER_API_KEY = 'a9ba93e8b783e589e53e6d5e3cf983c3ecb1c758'
+
+# clearbit enrichment API key
+CLEARBIT_API_KEY = 'sk_e05c3ad094e919397c321893dba3fa23'
+
+# The users models that to use for signing up and login the users.
+AUTH_USER_MODEL = 'SocialNetwork.User'
+
+# The authentication backend to use to authenticate the user based on the JWT token.
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('SocialNetwork.auth.backends.JWTAuthenticationBackend',),
+}
