@@ -3,10 +3,10 @@ Trade code project Task.
 
 Sorry for the lack of automated testing, Because lack of time I only tested the features manually and didn't build unit test for them.
 
-##Requirements
+## Requirements
 * Python 3.9
 
-##Installation
+## Installation
 It's recommended to use python virtual environment to run the project.
 
 There need to provide the following fields in the django site settings (The fields already exist in the site settings file):
