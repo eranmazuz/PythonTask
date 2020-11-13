@@ -36,13 +36,6 @@ I chose to use python file as the Bot configuration file for the following reaso
 
 
 
- 
-
-
-### Bot default configuration loading
-I chose load the bot 
-
-
 ### Retrying user signup
 Because the bot use have limited amount of mails to choose from and the mail used and identifier for login,
 if the registration failed a new user with different email is generated until the new user is successfully signed up.
